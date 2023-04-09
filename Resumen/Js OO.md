@@ -93,6 +93,48 @@ Mejoro el código
 
 ![img_14.png](img_14.png)
 
+## Modularizando el código
+
+En esta clase seccionaremos al archivo en módulos, En la carpeta aula_03 iré creando los módulos y dentro de cada uno 
+pongo las clases luego para acceder desde `index.js` los debo importar.
+
+Esta es la sintaxis 
+
+![img_15.png](img_15.png) 
+
+ Para crear ese archivo package.json lo podemos crear de dos formas: lo podemos hacer a mano si conocemos la estructura 
+ y todas las variables, o podemos hacer uso de una herramienta que nos permite utilizar Node que se llama `NPM`, 
+ de **_Node Package Management_** y ejecutamos ese comando diciéndole que inicie nuestro proyecto.
+
+Al igual que en las clases de OB inicio un paquete json con el comando `NPM init`
+
+![img_16.png](img_16.png)
+
+ahí comienzo a cargar los datos requeridos en la terminal: el nombre entre parentesis lo pone automatico por la carpeta
+lo siguiente escrito en minusculas es el nombre que le dimos en esta clase.
+
+![img_17.png](img_17.png)
+
+![img_18.png](img_18.png)
+
+Me pregunta si esta bien: la carpeta tenia un ascento que no lo lee -- COMPROBÉ QUE SI FUNCIONA --  me llevo al repositorio
+
+![img_19.png](img_19.png)
+
+Con todo esto todavía da error la importación, agrego `"type" : "module",` en este ejemplo lleva coma en otros no.
+
+![img_20.png](img_20.png)
+
+exporto la clase en el mod cuentaCorriente
+
+![img_21.png](img_21.png)   -- 
+
+![img_22.png](img_22.png) -- si no exportaba los dos no funcionaba.
+
+![img_23.png](img_23.png)
+
+FUNCIONA CORRECTAMENTE.
+
 
 
 
