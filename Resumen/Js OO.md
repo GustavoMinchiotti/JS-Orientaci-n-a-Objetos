@@ -63,3 +63,41 @@ inicialización.
 
 ![img_8.png](img_8.png)
 
+### Atributos privados #2 Encapsulamiento
+
+Por convención todavía no es oficial anteponiendo él `#` a la variable convierto un atributo en privado y solo es visible 
+y operable dentro de la función. NOTA si utilizo `_` le digo al programador que lo trate como privado, pero NODEJS 
+lo ejecuta igual.
+
+![img_9.png](img_9.png)
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Private_class_fields
+
+### Métodos con retorno
+
+Palabra reservada `return`
+
+![img_10.png](img_10.png)
+
+Creo la function para retorno sin romper la encapsulation
+
+![img_11.png](img_11.png)
+
+Visualizo la información
+
+![img_12.png](img_12.png)
+
+Mejoro el código
+
+![img_13.png](img_13.png)
+
+![img_14.png](img_14.png)
+
+
+
+
+
+
+
+
+

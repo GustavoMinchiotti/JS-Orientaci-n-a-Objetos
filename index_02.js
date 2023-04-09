@@ -5,7 +5,7 @@ const dniCliente = "27000000";
 const numeroDeCuenta = "123456789";
 const saldoCuenta = 1000;
 
-console.log(nombreCliente);
+//console.log(nombreCliente);
 
 /* It creates a class called Cliente. */
 class Cliente {
@@ -16,7 +16,7 @@ class Cliente {
 
 class CuentaCorriente {
     numero;
-    saldo;
+    #saldo; // atributo privado
     agencia;
 
 
@@ -26,15 +26,27 @@ class CuentaCorriente {
      */
     constructor() {
         this.numero = '';
-        this.saldo = 0;
+        this.#saldo = 0;
         this.agencia = '';
     }
 
     depositoEnCuenta(valor) {
-        this.saldo += valor;
+        if (valor > 0)
+            this.#saldo += valor;
+        return this.#saldo  // la func retorna el valor del atributo privado
     }
     retirarDeCuenta(valor) {
-        this.saldo -= valor;
+        if (valor <= this.#saldo) // aseguro que no pueda retirar mas de lo que tiene en su cuenta.
+            this.#saldo -= valor;
+        return this.#saldo
+    }
+
+    /**
+     * The function returns the value of the private variable "saldo".
+     * @returns The `verSaldo()` method is returning the value of the private `#saldo` property.
+     */
+    verSaldo() {
+        return this.#saldo;
     }
 }
 
@@ -47,11 +59,23 @@ cliente1.nombreCliente = "Gustavo";
 cliente1.dniCliente = "27000000";
 cliente1.numeroFiscalCliente = "M27000000"
 
-//cuentaCorriente1.numero = "123456789";
-//cuentaCorriente1.saldo = 1000;
-//cuentaCorriente1.agencia = 152;
+cuentaCorriente1.numero = "123456789";
+//cuentaCorriente1.#saldo = 1000;
+cuentaCorriente1.agencia = 152;
 
-console.log(cuentaCorriente1.saldo);
+// console.log(cuentaCorriente1.saldo);
 cuentaCorriente1.depositoEnCuenta(500);
-console.log(cuentaCorriente1.saldo);
-console.log(cuentaCorriente1);
+// console.log(cuentaCorriente1.saldo);
+// console.log(cuentaCorriente1);
+
+//* creo la variable para ver el saldo, luego lo imprimo en pantalla.
+let saldo = cuentaCorriente1.verSaldo();
+console.log("El saldo de la cuenta es " + saldo);
+
+//! puedo directamente asignar los movimientos a la variable y simplificar
+
+/* Calling the `depositoEnCuenta()` method of the `CuentaCorriente` class with a parameter of 750,
+which adds 750 to the private `#saldo` property of the `cuentaCorriente1` object and returns the
+updated value. This updated value is then assigned to the `saldo` variable. */
+saldo = cuentaCorriente1.depositoEnCuenta(750);
+console.log("El saldo de la cuenta es " + saldo);
