@@ -1,4 +1,5 @@
 export class CuentaCorriente {
+    cliente;
     numero;
     #saldo; // atributo privado
     agencia;
@@ -8,6 +9,7 @@ export class CuentaCorriente {
      * class.
      */
     constructor() {
+        this.cliente = null;    //? clase 03-03 es null para que lo RELACIONE con uno nuevo pero no lo cree acá
         this.numero = '';
         this.#saldo = 0;
         this.agencia = '';
@@ -30,5 +32,13 @@ export class CuentaCorriente {
      */
     verSaldo() {
         return this.#saldo;
+    }
+
+    // Nuevo método -- 1er param es valor "lo que voy a transferir" 
+    // 2do param es la "cuentaDestino"
+    transferirParaCuenta(valor,cuentaDestino) {
+        this.retirarDeCuenta(valor);    // this porque retiro de acá
+        cuentaDestino.depositoEnCuenta(valor);  // el param se reemplaza cuando le digo a donde transfiero.
+
     }
 }

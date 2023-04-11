@@ -135,9 +135,30 @@ exporto la clase en el mod cuentaCorriente
 
 FUNCIONA CORRECTAMENTE.
 
+### Composición de clases
 
+Componer clases es unirlas de manera que trabajen juntas varias clases.
 
+En esta clase agregamos un objeto dentro de cuenta corriente, a cliente y en el constructor lo iniciamos como `null`
+para referenciarlo pero crearlo en otro lado, el módulo propio de Cliente.
 
+![img_24.png](img_24.png)
+
+![img_25.png](img_25.png)
+
+Lo muestra exitosamente
+
+![img_26.png](img_26.png)
+
+#### Método para transferir
+Como dice la imagen, los parámetros son el `valor` de esta cuenta por eso el uso de `.this` y el segundo es la cuenta de 
+destino que luego será asignada. dentro de este método/función uso los ya creados para _retirar y depositar_.
+
+![img_27.png](img_27.png)
+
+Luego de crear la nueva cuenta y cliente "ejemplo en código" hago la transferencia e imprimo el saldo inicial y posterior
+
+![img_28.png](img_28.png)
 
 
 
