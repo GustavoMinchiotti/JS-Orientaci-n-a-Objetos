@@ -188,9 +188,50 @@ La sintaxis es bastante distinta a otros lenguajes.
 Ver en Ob y el video que guarde en youtube : https://www.youtube.com/watch?v=TEzu31q9MVA
 
 
+## constructor
 
+Si bien en las clases anteriores los objetos se construían era de manera implícita por js. con varias líneas de código
+con esta manera simplificamos el código.
 
+![img_29.png](img_29.png)
 
+Al ser parámetros la creación cambia:
 
+De esto:
+* ![img_30.png](img_30.png)
 
+A esto: 
+* ![img_31.png](img_31.png)
 
+Ahora refactoriza el código del constructor cuenta corriente:
+
+![img_32.png](img_32.png) a este archivo lo mejoro ==>
+
+Como cliente es un objeto y atributo privado para construir la cuenta corriente llamo al setter
+
+![img_33.png](img_33.png)
+
+Para usarla en index debo usar parámetros
+
+![img_34.png](img_34.png)  ![img_35.png](img_35.png)
+
+Muy Importante, el profesor cambio get y set cliente por solo cliente en mi caso como no lo quise cambiar tuve que usar 
+getCliente para obtener los datos.
+
+## Atributos estáticos
+
+Siempre se va a acceder a través de la clase y nunca desde `.this`
+
+El atributo estático es común a todas las piezas (en este ejemplo todas las cuentas corrientes), toda vez que sea 
+construida una instancia, ese atributo es estático, ese atributo va a estar compartido para todas.
+
+Utilizamos la palabra reservada `static`
+
+![img_37.png](img_37.png)
+
+Al llamar a la clase le digo que afecte a todas y no solo a esta instancia como con this
+
+![img_36.png](img_36.png)
+
+![img_38.png](img_38.png)
+.

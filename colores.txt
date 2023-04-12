@@ -24,6 +24,6 @@
 			"titleBar.activeForeground": "#d9c108",
 			"titleBar.inactiveBackground": "#d9c10899",
 			"titleBar.inactiveForeground": "#15202b99"
-	},
-	"docwriter.language": "English"
+	}
+
 }}
