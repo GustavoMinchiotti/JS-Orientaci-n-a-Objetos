@@ -160,6 +160,36 @@ Luego de crear la nueva cuenta y cliente "ejemplo en código" hago la transferen
 
 ![img_28.png](img_28.png)
 
+##  Parámetros por valor y por referencia
+
+Bien, en el caso de los **objetos** imaginemos que JavaScript toma esa caja y se la pasa a la función. 
+Entonces la función tiene acceso a la caja entera. En el caso de los _valores primitivos_, por ejemplo `valor`, lo que 
+hace acá es copiar el valor, decir qué tiene, pero no te pasa la caja. Entonces, este caso se llama parámetro con valor 
+y en el caso de los objetos, los arrays o cosas variables más complejas, se llaman parámetros por referencia.
+
+Por valor = copia del valor (string, numero, etc)
+por referencia = copia el espacio de memoria (**Puede modificar la función!!**)
+
+
+## Null y undefined
+ 
+En el ejemplo de la clase explica que puedo crear un objeto y al asignarle `null` en el constructor la clase funciona 
+igual, en cambio, si no lo hago me retorna `undefined` que es un error.
+
+## SET y GET atributos privados
+
+Siguiendo con el ejemplo de la clase al querer convertir a la clase Cliente en privada vemos que por ser un tipo de dato
+no primitivo "un objeto en particular" debemos trabajar de otra manera.
+
+Acá entran SET y Get
+
+La sintaxis es bastante distinta a otros lenguajes.
+
+Ver en Ob y el video que guarde en youtube : https://www.youtube.com/watch?v=TEzu31q9MVA
+
+
+
+
 
 
 
